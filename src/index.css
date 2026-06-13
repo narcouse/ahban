@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-navy-dark: #0a192f;
+  --color-navy: #112240;
+  --color-navy-light: #233554;
+  --color-charcoal-dark: #0a192f;
+  --color-charcoal: #112240;
+  --color-charcoal-light: #233554;
+  --color-teal-accent: #64ffda;
+  --color-teal-light: #80ffe1;
+  --color-gold-accent: #fbbf24;
+  --color-gold-light: #fcd34d;
+  --color-soft-gray: #e6f1ff;
+  --color-slate-gray: #8892b0;
+}
+
+@layer utilities {
+  /* Glassmorphism panel styling */
+  .glass-panel {
+    background: rgba(17, 34, 64, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+  }
+
+  .glass-panel-light {
+    background: rgba(230, 241, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-card {
+    background: rgba(17, 34, 64, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(100, 255, 218, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(100, 255, 218, 0.15);
+  }
+
+  /* Custom animations */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.55);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.55);
+  }
+  
+  .glow-box-teal {
+    box-shadow: 0 0 40px -10px rgba(100, 255, 218, 0.3);
+  }
+
+  .glow-box-gold {
+    box-shadow: 0 0 40px -10px rgba(251, 191, 36, 0.25);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0a192f; /* deep navy dark bg */
+  color: #e6f1ff;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+  background: #112240;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
+}
